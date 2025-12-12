@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Wallah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Logo</h1>
+            <ul class="section">
+                <li>Home</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+            <button class="username">Username</button>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="left">
+                <div class="maintxt">
+                    <h1>Revitalize Your</h1>
+                    <h1>Clothes with Expert</h1>
+                    <h1 class="bluetxt">Laundry Services!</h1>
+                </div>
+
+                <div class="para">
+                    <p>From premium dry cleaning to swift wash and fold, we <br>deliver care and convenience. Schedule a
+                        pickup and <br> rediscover the freshness of your clothes today!
+                    </p>
+                </div>
+
+                <a href="#bookservice">
+                    <button>
+                        Book a services today!</button></a>
+            </div>
+
+            <div class="right">
+                <img src="https://png.pngtree.com/png-clipart/20241230/original/pngtree-illustration-wash-machine-with-laundry-service-icons-png-image_18355401.png"
+                    alt="washing">
+            </div>
+        </div>
+
+        <div class="achievements">
+            <h1>Our Achievements</h1>
+            <ul class="services">
+                <li style="padding-right: 10px;  border-right: 2px solid rgb(255, 255, 255 , 0.5);">15+ <br> Laundry
+                    Services</li>
+                <li style="padding-right: 10px;  border-right: 2px solid rgba(255, 255, 255, 0.598);"> 240+ <br> Happy
+                    Customer</li>
+                <li style="padding-right: 10px;  border-right: 2px solid rgb(255, 255, 255 , 0.5);"> 2+ Yrs <br>
+                    Experience</li>
+            </ul>
+        </div>
+
+        <div id="bookservice">
+            <div class="leftservice">
+                <div class="leftheading">
+                    <h1>Our Services</h1>
+                    <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+                </div>
+
+                <hr style="margin: 20px 0;">
+
+                    <div class="list">
+                        <ul>
+                            <li class="inbox-item">
+                                <img src="laundry.png" width="20px" alt="">
+                                <span class="name">Dry Cleaning </span>
+                                <h1>•</h1>
+                                <p class="price">₹200.00</p>
+                                <button id="item1" class="addbtn">Add item</button>
+                            </li>
+
+                            <li class="inbox-item">
+                                <img src="laundry-machine.png" width="20px" alt="">
+                                <span class="name">Wash & Fold </span>
+                                <h1>•</h1>
+                                <p class="price">₹100.00</p>
+                                <button id="item2" class="addbtn">Add item</button>
+                            </li>
+
+                            <li class="inbox-item">
+                                <img src="iron.png" width="20px" alt="">
+                                <span class="name">Ironing </span>
+                                <h1>•</h1>
+                                <p class="price">₹30.00</p>
+                                <button id="item3" class="addbtn">Add item</button>
+                            </li>
+
+                            <li class="inbox-item">
+                                <img src="spot.png" width="20px" alt="">
+                                <span class="name">Stain Removal </span>
+                                <h1>•</h1>
+                                <p class="price">₹500.00</p>
+                                <button id="item4" class="addbtn">Add item</button>
+                            </li>
+
+                            <li class="inbox-item">
+                                <img src="leather-work.png" width="20px" alt="">
+                                <span class="name">Leather & Suede Cleaning </span>
+                                <h1>•</h1>
+                                <p class="price">₹999.00</p>
+                                <button id="item5" class="addbtn">Add item</button>
+                            </li>
+
+                            <li class="inbox-item">
+                                <img src="wedding.png" width="20px" alt="">
+                                <span class="name">Wedding Dress Cleaning</span>
+                                <h1>•</h1>
+                                <p class="price">₹2800.00</p>
+                                <button id="item6" class="addbtn">Add item</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr style="margin: 20px 0;">
+
+                    <div id="info">
+                        <img src="info.png" alt="">
+                        <h2>Add the items to the cart and book now</h2>
+
+                    </div>
+                
+            </div>
+
+                <div class="rightservice">
+                    <div class="rightheading">
+                        <h1>Added Items</h1>
+                    </div>
+                    <div class="table-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Service Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="inbox">
+
+                            </tbody>
+                        </table>
+                        <div class="total-price">
+                            <span>Total Amount</span>
+                            <span class="total">₹0</span>
+                        </div>
+                    </div>
+
+                    <form id="myform">
+                        <div class="container">
+                            <h2>Book Now</h2>
+
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe" required id="name">
+
+                            <div class="row">
+                                <div class="field">
+                                    <label>Email ID</label>
+                                    <input type="email" placeholder="mailid@gmail.com" required id="email">
+                                </div>
+
+                                <div class="field">
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="0000000000" required id="phone">
+                                </div>
+                            </div>
+
+                            <button onclick="booknow()" type="submit" return false>Book now</button>
+                        </div>
+                    </form>
+
+                    <div id="update">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="About-us">
+                <div class="card1 value">
+                    <img src="laundry-machine 2.png" width="100" alt="">
+                    <h2>Premium Services</h2>
+                    <p>Elevate your wardrobe with our
+                        meticulous dry cleaning,
+                        ensuring garments look and feel
+                        as good as new.</p>
+                </div>
+                <div class="card2 value">
+                    <img src="support.png" width="100" alt="">
+                    <h2>Quick Support</h2>
+                    <p>We're committed to providing
+                        prompt solutions to ensure your
+                        experience is smooth and
+                        worry-free.</p>
+                </div>
+                <div class="card3 value">
+                    <img src="delivery-man.png" width="100" alt="">
+                    <h2>Hassle Free Delivery</h2>
+                    <p>Enjoy seamless service with our
+                        convenient pickup and delivery
+                        options, tailored to your
+                        schedule.</p>
+                </div>
+                <div class="card4 value">
+                    <img src="cost.png" width="100" alt="">
+                    <h2>Affordable Prices</h2>
+                    <p>Experience exceptional care
+                        without breaking the bank - our
+                        affordable prices make laundry
+                        day stress-free.</p>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h1>Subscribe to our <br> newsletter.</h1>
+                <form>
+                    <div class="subs">
+                        <input id="newsna" type="text" placeholder="Full name" required>
+                        <input id="newsemail" type="text" placeholder="Email" required>
+                        <div>
+                            <button id="btn">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+    </main>
+    <footer>
+        <div class="information">
+            <div class="ourself">
+                <h2>Logo</h2>
+                <div class="oursite">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="links">
+                <h3>Important Links</h3>
+                <ul>
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of use</li>
+                    <li>Refund Policy</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <span>mail@site.com</span>
+                <p>+91 91234 56780</p>
+            </div>
+            <div class="follow">
+                <h3>Follow us</h3>
+                <a href=""><img src="instagram.png" alt="" width="24px"></a>
+                <a href=""><img src="facebook.png" alt="" width="24px"></a>
+                <a href=""><img src="twitter.png" alt="" width="24px"></a>
+                <a href=""><img src="youtube.png" alt="" width="24px"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
