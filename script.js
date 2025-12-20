@@ -149,6 +149,12 @@ async function booknow() {
 
 }
 
+// clear input values
+async function clearinput(m, p, n) {
+    let mail = document.querySelector("#email").value = '';
+    let phone = document.querySelector("#phone").value = '';
+    let name = document.querySelector("#name").value = '';
+}
 
 // send confirmation mail
 function sendMail(name , email) {
@@ -163,10 +169,11 @@ function sendMail(name , email) {
 
     return emailjs.send(serviceID, templateID, params)
         .then(() => {
-            console.log("Email sent successfully");
+            alert("Email sent successfully");
         })
         .catch((err) => {
             console.error("Email error:", err);
         });
 }
+
 
