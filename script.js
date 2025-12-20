@@ -142,15 +142,31 @@ async function booknow() {
             clearinput(mail, phone, name)
 
             resetbuttons()
+
+             sendMail(name , mail)
         })
     }
 
 }
 
 
-// clear input values
-async function clearinput(m, p, n) {
-    let mail = document.querySelector("#email").value = '';
-    let phone = document.querySelector("#phone").value = '';
-    let name = document.querySelector("#name").value = '';
+// send confirmation mail
+function sendMail(name , email) {
+
+    const serviceID = "service_af3uf4q";     
+    const templateID = "template_5hiudf4";   
+
+    const params = {
+        user_name: name,
+        user_email: email,
+    };
+
+    return emailjs.send(serviceID, templateID, params)
+        .then(() => {
+            console.log("Email sent successfully");
+        })
+        .catch((err) => {
+            console.error("Email error:", err);
+        });
 }
+
