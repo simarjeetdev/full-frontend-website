@@ -117,6 +117,13 @@ function resetbuttons() {
 }
 
 
+function formatOrder(cart) {
+    return cart.map((item, i) =>
+        `${i + 1}. ${item.name} - ${item.price}`
+    ).join('\n');
+}
+
+
 // book the service
 async function booknow() {
     let mail = document.querySelector("#email").value
@@ -136,6 +143,10 @@ async function booknow() {
         myform.addEventListener('submit', function (e) {
             e.preventDefault();
 
+            const orderDetails = formatOrder(cart);
+            const totalAmount = total.innerText;
+            
+            sendMail(name , mail , orderDetails, totalAmount)
             cart = []
             updateTable()
 
@@ -143,11 +154,11 @@ async function booknow() {
 
             resetbuttons()
 
-             sendMail(name , mail)
         })
     }
 
 }
+
 
 // clear input values
 async function clearinput(m, p, n) {
@@ -157,7 +168,7 @@ async function clearinput(m, p, n) {
 }
 
 // send confirmation mail
-function sendMail(name , email) {
+function sendMail(name , email , orderDetails, totalAmount) {
 
     const serviceID = "service_af3uf4q";     
     const templateID = "template_5hiudf4";   
@@ -165,6 +176,8 @@ function sendMail(name , email) {
     const params = {
         user_name: name,
         user_email: email,
+        order_details: orderDetails,
+        total_amount: totalAmount
     };
 
     return emailjs.send(serviceID, templateID, params)
